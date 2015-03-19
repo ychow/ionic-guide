@@ -14,6 +14,7 @@ Ionic的联合创始人Max Lynch介绍这款工具时提到，这款工具就是
 ## 入门指南
 
 * 搭建环境
+  + [Ionic 安装](https://github.com/ychow/ionic-guide/blob/master/Ionic%20%E5%AE%89%E8%A3%85.md)
 * 常用CSS样式
 * 常用Js控件
 * 综合项目
