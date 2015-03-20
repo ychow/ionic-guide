@@ -49,5 +49,38 @@
 
 > button的默认情况是按照 display: inline-block 来显示，宽度是随其内部文字长度增长的。
 
+```javascript
+<button class="button">
+  Default
+</button>
+<button class="button button-light">
+  button-light
+</button>
+<button class="button button-stable">
+  button-stable
+</button>
+<button class="button button-positive">
+  button-positive
+</button>
+<button class="button button-calm">
+  button-calm
+</button>
+<button class="button button-balanced">
+  button-balanced
+</button>
+<button class="button button-energized">
+  button-energized
+</button>
+<button class="button button-assertive">
+  button-assertive
+</button>
+<button class="button button-royal">
+  button-royal
+</button>
+<button class="button button-dark">
+  button-dark
+</button>
+```
+
 ![button](http://7vijqz.com1.z0.glb.clouddn.com/button.png)
 
