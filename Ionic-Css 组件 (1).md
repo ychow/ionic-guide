@@ -47,7 +47,7 @@
 
 #### Button
 
-> button的默认情况是按照 display: inline-block 来显示，宽度是随其内部文字长度增长的。
+ * button的默认情况是按照 display: inline-block 来显示，宽度是随其内部文字长度增长的。
 
 ```javascript
 <button class="button">
@@ -84,3 +84,21 @@
 
 ![button](http://7vijqz.com1.z0.glb.clouddn.com/button.png)
 
+
+* 如果想让button占满父元素宽度，需要加上 button-block 样式
+
+```javascript
+<button class="button button-block button-positive">
+  Block Button
+</button>
+```
+![button-block](http://7vijqz.com1.z0.glb.clouddn.com/button-block.png)
+
+* 如果是想让 button 100%撑满整个屏幕宽度，并且去掉任何边框以及圆角，当然了父元素也必须没有任何 padding
+
+```javascript
+<button class="button button-full button-positive">
+  Full Width Block Button
+</button>
+```
+![button-full](http://7vijqz.com1.z0.glb.clouddn.com/button-full.png)
