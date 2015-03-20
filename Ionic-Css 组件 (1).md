@@ -47,7 +47,7 @@
 
 #### Button
 
- * button的默认情况是按照 display: inline-block 来显示，宽度是随其内部文字长度增长的。
+ 1. button的默认情况是按照 display: inline-block 来显示，宽度是随其内部文字长度增长的。
 
 ```javascript
 <button class="button">
@@ -85,7 +85,7 @@
 ![button](http://7vijqz.com1.z0.glb.clouddn.com/button.png)
 
 
-* 如果想让button占满父元素宽度，需要加上 button-block 样式
+2. 如果想让button占满父元素宽度，需要加上 button-block 样式
 
 ```javascript
 <button class="button button-block button-positive">
@@ -94,7 +94,8 @@
 ```
 ![button-block](http://7vijqz.com1.z0.glb.clouddn.com/button-block.png)
 
-* 如果是想让 button 100%撑满整个屏幕宽度，并且去掉任何边框以及圆角，当然了父元素也必须没有任何 padding
+
+3. 如果是想让 button 100%撑满整个屏幕宽度，并且去掉任何边框以及圆角，当然了父元素也必须没有任何 padding
 
 ```javascript
 <button class="button button-full button-positive">
@@ -102,3 +103,41 @@
 </button>
 ```
 ![button-full](http://7vijqz.com1.z0.glb.clouddn.com/button-full.png)
+
+
+4. ionic 默认也为 button 提供了不同的大小样式。button-large 和 button-small
+
+```javascript
+<button class="button button-small button-assertive">
+  Small Button
+</button>
+<button class="button button-large button-positive">
+  Large Button
+</button>
+```
+
+![button-size](http://7vijqz.com1.z0.glb.clouddn.com/button-size.png)
+
+
+5. 还有只显示框线的button-----button-outline
+
+```javascript
+<button class="button button-outline button-positive">
+  Outlined Button
+</button>
+```
+
+![button-outline](http://7vijqz.com1.z0.glb.clouddn.com/button-outline.png)
+
+
+6. 不显示边框的 button 样式--- button-clear
+
+```javascript
+<button class="button button-clear button-positive">
+  Clear Button
+</button>
+```
+
+![button-clear](http://7vijqz.com1.z0.glb.clouddn.com/button-clear.png)
+
+
