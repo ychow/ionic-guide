@@ -182,7 +182,7 @@
 
 9. 一组 button
 
-···javascript
+```javascript
 <div class="button-bar bar-positive">
   <a class="button">First</a>
   <a class="button">Second</a>
