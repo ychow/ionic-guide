@@ -178,3 +178,16 @@
 
 ![icon-nav](http://7vijqz.com1.z0.glb.clouddn.com/button-nav.png)
 
+
+
+9. 一组 button
+
+···javascript
+<div class="button-bar bar-positive">
+  <a class="button">First</a>
+  <a class="button">Second</a>
+  <a class="button">Third</a>
+</div>
+```
+
+![buttons](http://7vijqz.com1.z0.glb.clouddn.com/buttons.png)
