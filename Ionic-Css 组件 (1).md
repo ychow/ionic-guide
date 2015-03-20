@@ -141,3 +141,40 @@
 ![button-clear](http://7vijqz.com1.z0.glb.clouddn.com/button-clear.png)
 
 
+7. 带icon的button，可以控制icon的位置
+
+```javascript
+<button class="button">
+  <i class="icon ion-loading-c"></i> Loading...
+</button>
+
+<button class="button icon-left ion-home">Home</button>
+
+<button class="button icon-left ion-star button-positive">Favorites</button>
+
+<a class="button icon-right ion-chevron-right button-calm">Learn More</a>
+
+<a class="button icon-left ion-chevron-left button-clear button-dark">Back</a>
+
+<button class="button icon ion-gear-a"></button>
+
+<a class="button button-icon icon ion-settings"></a>
+
+<a class="button button-outline icon-right ion-navicon button-balanced">Reorder</a>
+```
+
+![icon-button](http://7vijqz.com1.z0.glb.clouddn.com/icon-button.png)
+
+
+8. 我们也可以在 Header 上面添加按钮，并且可以把按钮放在左右两边，常用于导航按钮。
+
+```javascript
+<div class="bar bar-header">
+  <button class="button icon ion-navicon"></button>
+  <h1 class="title">Header Buttons</h1>
+  <button class="button">Edit</button>
+</div>
+```
+
+![icon-nav](http://7vijqz.com1.z0.glb.clouddn.com/button-nav.png)
+
