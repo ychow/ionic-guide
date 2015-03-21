@@ -191,3 +191,28 @@
 ```
 
 ![buttons](http://7vijqz.com1.z0.glb.clouddn.com/buttons.png)
+
+
+
+#### List
+
++ 列表默认会为每一个 li 有一个 border-bottom 的样式。默认代码：
+
+```javascript
+<ul class="list">
+    <li class="item">
+      	list1
+    </li>
+    <li class="item">
+      	list1
+    </li>
+    <li class="item">
+      	list1
+    </li>
+    <li class="item">
+      	 list1
+    </li>
+</ul>
+```
+
+![list](http://7vijqz.com1.z0.glb.clouddn.com/list.png)
