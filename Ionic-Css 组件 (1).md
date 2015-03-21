@@ -282,3 +282,76 @@
 ```
 
 ![list-icon](http://7vijqz.com1.z0.glb.clouddn.com/list-icon.png)
+
+
+##### 列表按钮
+
+> 可以通过添加**item-button-right** 或者 **item-button-left** 来让 item 里面的按钮排在左右
+
+```javascript
+<div class="list">
+  <div class="item item-button-right">
+    Call Ma
+    <button class="button button-positive">
+      <i class="icon ion-ios7-telephone"></i>
+    </button>
+  </div>
+</div>
+```
+
+![list-button](http://7vijqz.com1.z0.glb.clouddn.com/list-button.png)
+
+
+> 带有头像的 item 。可以添加 **item-avatar** 样式
+
+
+```javascript
+<div class="list">
+    <a class="item item-avatar" href="#">
+      <img src="venkman.jpg">
+      <h2>Venkman</h2>
+      <p>Back off, man. I'm a scientist.</p>
+    </a>
+</div>
+```
+
+![item-avatar](http://7vijqz.com1.z0.glb.clouddn.com/list-avatar.png)
+
+
+
+> 带有缩略图的 item 。注意**item-thumbnail-left** 和 **item-thumbnail-right** 样式，可以指定缩略图不同的显示位置。
+
+```javascript
+<div class="list">
+    <a class="item item-thumbnail-left" href="#">
+      <img src="cover.jpg">
+      <h2>Pretty Hate Machine</h2>
+      <p>Nine Inch Nails</p>
+    </a>
+</div>
+```
+
+
+![item-thumbnail](http://7vijqz.com1.z0.glb.clouddn.com/list-thumbnail.png)
+
+
+> 表格样式的list，这个主要是有了margin的样式，显示两边的框线。注意样式list list-inset。
+
+
+```javascript
+<div class="list list-inset">
+    <div class="item">
+      Raiders of the Lost Ark
+    </div>
+</div>
+```
+
+
+![list-inset](http://7vijqz.com1.z0.glb.clouddn.com/list-inset.png)
+
+
+
+
+
+
+> Ionic CSS 组件(1) 完结    2015/3/22
