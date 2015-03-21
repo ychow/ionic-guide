@@ -196,7 +196,8 @@
 
 #### List
 
-+ 列表默认会为每一个 li 有一个 border-bottom 的样式。默认代码：
+
+> 列表默认会为每一个 li 有一个 border-bottom 的样式。默认代码：
 
 ```javascript
 <ul class="list">
@@ -216,3 +217,68 @@
 ```
 
 ![list](http://7vijqz.com1.z0.glb.clouddn.com/list.png)
+
+
+
+##### List 分栏
+
+
+> 为列表的任何一个子元素添加 item-divider 样式,就可以实现分栏的效果。
+
+```javascript
+<ul class="list">
+ <li class="item item-divider">
+    Title
+  </li>
+  <li class="item">
+    list1
+  </li>
+  <li class="item item-divider">
+    Title
+  </li>
+  <li class="item">
+    list1
+  </li>
+</ul>
+```
+
+
+![list-divider](http://7vijqz.com1.z0.glb.clouddn.com/list-divider.png)
+
+
+##### 列表图标
+
+> 在list 中可以给每一个有 item 样式的添加 icons，并且可以通过添加**item-icon-left**排在左边，或者添加**item-icon-right** 排在右边。
+
+```javascript
+<div class="list">
+
+  <a class="item item-icon-left" href="#">
+    <i class="icon ion-email"></i>
+    Check mail
+  </a>
+
+  <a class="item item-icon-left item-icon-right" href="#">
+    <i class="icon ion-chatbubble-working"></i>
+    Call Ma
+    <i class="icon ion-ios7-telephone-outline"></i>
+  </a>
+
+  <a class="item item-icon-left" href="#">
+    <i class="icon ion-mic-a"></i>
+    Record album
+    <span class="item-note">
+      Grammy
+    </span>
+  </a>
+
+  <a class="item item-icon-left" href="#">
+    <i class="icon ion-person-stalker"></i>
+    Friends
+    <span class="badge badge-assertive">0</span>
+  </a>
+
+</div>
+```
+
+![list-icon](http://7vijqz.com1.z0.glb.clouddn.com/list-icon.png)
