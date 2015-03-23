@@ -156,3 +156,101 @@ angular.module('starter', ['ionic'])
 ![ionic-backdrop](http://7vijqz.com1.z0.glb.clouddn.com/backdrop.gif)
 
 
+
+
+### ion-refresher 
+
+> 这个是类似于下拉刷新的效果。
+
+**HTML**:
+
+```javascript
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="js/app.js"></script>
+  </head>
+    <body ng-app="starter" ng-controller="actionsheetCtl" >
+
+        <ion-pane>
+            <ion-content >
+                <ion-refresher pulling-text="下拉刷新" on-refresh="doRefresh()"></ion-refresher>
+                <ion-list>
+                    <ion-item ng-repeat="item in items" ng-bind="item.name"></ion-item>
+                </ion-list>
+            </ion-content>
+        </ion-pane>
+    </body>
+</html>
+
+```
+
+**JavaScript**:
+
+```javascript
+
+angular.module('starter', ['ionic'])
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+  });
+})
+
+.controller( 'actionsheetCtl',['$scope','$timeout' ,'$http',function($scope,$timeout,$http){
+
+    $scope.items=[
+        {
+            "name":"HTML5"
+        },
+        {
+            "name":"JavaScript"
+        },
+        {
+            "name":"Css3"
+        }
+    ];
+
+    $scope.doRefresh = function() {
+        $http.get('js/item.json')
+            .success(function(newItems) {
+                $scope.items = newItems;
+            })
+            .finally(function() {
+                $scope.$broadcast('scroll.refreshComplete');
+            });
+    };
+}])
+
+```
+
+**Json**:
+
+```javascript
+[
+	{
+		"name":"Ychow"
+	},
+	{
+		"name":"Xiao"
+	}
+]
+```
+
+![ion-refresher](http://7vijqz.com1.z0.glb.clouddn.com/ion-fresher.gif)
