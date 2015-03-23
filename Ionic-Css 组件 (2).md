@@ -319,3 +319,241 @@
 ```
 
 ![toggle](http://7vijqz.com1.z0.glb.clouddn.com/toggle.png)
+
+
+
+
+#### Checkbox
+
+> Ionic 里面的 Checkbox 和普通的 Checkbox 效果上其实相差不大，只是样式上有所不同。
+
+
+```javascript
+<ul class="list">
+
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox">
+     </label>
+     Flux Capacitor
+  </li>
+
+  ...
+
+</ul>
+```
+
+![Checkbox](http://7vijqz.com1.z0.glb.clouddn.com/checkbox.png)
+
+
+
+#### 单选按钮
+
+```javascript
+<div class="list">
+
+  <label class="item item-radio">
+    <input type="radio" name="group">
+    <div class="item-content">
+      Go
+    </div>
+    <i class="radio-icon ion-checkmark"></i>
+  </label>
+
+  ...
+
+</div>
+```
+
+![radion-button](http://7vijqz.com1.z0.glb.clouddn.com/radio.png)
+
+
+
+#### Range
+
+> Ionic 为 Range 提供了很多种默认的样式。而且你可以在许多种元素里使用它比如列表或者 Card 。
+
+```javascript
+<div class="range">
+  <i class="icon ion-volume-low"></i>
+  <input type="range" name="volume">
+  <i class="icon ion-volume-high"></i>
+</div>
+
+<div class="list">
+  <div class="item range range-positive">
+    <i class="icon ion-ios7-sunny-outline"></i>
+    <input type="range" name="volume" min="0" max="100" value="33">
+    <i class="icon ion-ios7-sunny"></i>
+  </div>
+</div>
+```
+
+![Range](http://7vijqz.com1.z0.glb.clouddn.com/range.png)
+
+
+
+#### Select
+
+> Ionic 的 Select 相比原生的要好看一点，除了弹出的可选的选项，在这一点上是浏览器默认的。
+
+```javascript
+<div class="list">
+
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Lightsaber
+    </div>
+    <select>
+      <option>Blue</option>
+      <option selected>Green</option>
+      <option>Red</option>
+    </select>
+  </label>
+
+</div>
+```
+
+![Select](http://7vijqz.com1.z0.glb.clouddn.com/select.png)
+
+
+
+#### Tabs
+
+> Tabs 是水平排列的按钮或者链接，用以页面间切换的导航。
+
+```javascript
+<div class="tabs">
+  <a class="tab-item">
+    Home
+  </a>
+  <a class="tab-item">
+    Favorites
+  </a>
+  <a class="tab-item">
+    Settings
+  </a>
+</div>
+```
+
+![Tabs](http://7vijqz.com1.z0.glb.clouddn.com/tabs.png)
+
+
+> 上面的例子我们使用了 Ionic 提供的默认样式 default 。我们也可以使用如下的样式名来改变 Tab 的导航：
+**tabs-default**  **tabs-light**  **tabs-stable**  **tabs-positive**  **tabs-calm**  **tabs-balanced**  **tabs-energized**  **tabs-assertive**  **tabs-royal**  **tabs-dark**
+
+
+##### 只有图标的 Tabs
+
+> 可以在带有 tabs 的样式名的元素上添加 tabs-icon-only 来实现只有图标的 Tabs
+
+
+```javascript
+<div class="tabs tabs-icon-only">
+  <a class="tab-item">
+    <i class="icon ion-home"></i>
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-star"></i>
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-gear-a"></i>
+  </a>
+</div>
+```
+
+![only-icon-tab](http://7vijqz.com1.z0.glb.clouddn.com/only-icon-tab.png)
+
+
+##### 图标在顶部的 Tabs
+
+
+> 可以在带有 tabs 的样式名的元素上添加 tabs-icon-top 来实现图标在顶部的 Tabs 
+
+
+```javascript
+<div class="tabs tabs-icon-top">
+  <a class="tab-item">
+    <i class="icon ion-home"></i>
+    Home
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-star"></i>
+    Favorites
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-gear-a"></i>
+    Settings
+  </a>
+</div>
+```
+
+![top-icon-tabs](http://7vijqz.com1.z0.glb.clouddn.com/top-icon.png)
+
+
+##### 图标居左的 Tabs
+
+> 可以在带有 tabs 的样式名的元素上添加 tabs-icon-left 来实现图标居左的 Tabs 
+
+
+```javascript
+<div class="tabs tabs-icon-left">
+  <a class="tab-item">
+    <i class="icon ion-home"></i>
+    Home
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-star"></i>
+    Favorites
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-gear-a"></i>
+    Settings
+  </a>
+</div>
+```
+
+![icon-left](http://7vijqz.com1.z0.glb.clouddn.com/icon-left-tab.png)
+
+
+##### Striped Style Tabs
+
+> 可以在带有 tabs 的样式名的元素上添加 tabs-striped 来实现像 Android 风格的 tabs。也可以添加 tabs-top 来实现Tabs 在页面顶部。
+
+
+```javascript
+<div class="tabs-striped tabs-top tabs-background-positive tabs-color-light">
+    <div class="tabs">
+      <a class="tab-item active" href="#">
+        <i class="icon ion-home"></i>
+        Test
+      </a>
+      <a class="tab-item" href="#">
+        <i class="icon ion-star"></i>
+        Favorites
+      </a>
+      <a class="tab-item" href="#">
+        <i class="icon ion-gear-a"></i>
+        Settings
+      </a>
+    </div>
+  </div>
+  <div class="tabs-striped tabs-color-assertive">
+    <div class="tabs">
+      <a class="tab-item active" href="#">
+        <i class="icon ion-home"></i>
+        Test
+      </a>
+      <a class="tab-item" href="#">
+        <i class="icon ion-star"></i>
+        Favorites
+      </a>
+      <a class="tab-item" href="#">
+        <i class="icon ion-gear-a"></i>
+        Settings
+      </a>
+    </div>
+  </div>
+```
+
+![striped-style-tabs](http://7vijqz.com1.z0.glb.clouddn.com/striped-tabs.png)
