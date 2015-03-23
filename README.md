@@ -15,11 +15,12 @@ Ionic的联合创始人Max Lynch介绍这款工具时提到，这款工具就是
 
 * 搭建环境
   + [Ionic 安装](https://github.com/ychow/ionic-guide/blob/master/Ionic%20%E5%AE%89%E8%A3%85.md)
+
+* 常用CSS样式
   + [Ionic 图标](https://github.com/ychow/ionic-guide/blob/master/Ionic%20icon.md)
   + [Ionic-Css 组件 (1)](https://github.com/ychow/ionic-guide/blob/master/Ionic-Css%20%E7%BB%84%E4%BB%B6%20(1).md)
   + [Ionic-Css 组件 (2)](https://github.com/ychow/ionic-guide/blob/master/Ionic-Css%20%E7%BB%84%E4%BB%B6%20(2).md)
   + [Ionic-Css 组件 (3)](https://github.com/ychow/ionic-guide/blob/master/Ionic-Css%20%E7%BB%84%E4%BB%B6%20(3).md)
-* 常用CSS样式
 * 常用Js控件
 * 综合项目
 
