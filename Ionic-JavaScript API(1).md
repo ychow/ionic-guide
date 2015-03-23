@@ -83,6 +83,6 @@ angular.module('starter', ['ionic'])
 
 ```
 
-![action-sheet](http://7vijqz.com1.z0.glb.clouddn.com/action-sheet.png)
+![action-sheet](http://7vijqz.com1.z0.glb.clouddn.com/action-sheet.gif.gif)
 
 
