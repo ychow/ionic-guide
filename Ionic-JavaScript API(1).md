@@ -254,3 +254,346 @@ angular.module('starter', ['ionic'])
 ```
 
 ![ion-refresher](http://7vijqz.com1.z0.glb.clouddn.com/ion-fresher.gif)
+
+
+
+
+### ion-checkbox
+
+
+**JavaScript:**
+
+```javascript
+
+angular.module('starter', ['ionic'])
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+  });
+})
+
+.controller( 'actionsheetCtl',['$scope',function($scope){
+
+    $scope.devList = [
+        { text: "HTML5", checked: true },
+        { text: "CSS3", checked: false },
+        { text: "JavaScript", checked: false }
+      ];
+
+      $scope.pushNotificationChange = function() {
+        console.log('Push Notification Change', $scope.pushNotification.checked);
+      };
+      
+      $scope.pushNotification = { checked: true };
+      $scope.emailNotification = 'Subscribed';
+      
+}])
+
+```
+
+**HTML:**
+
+```javascript
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="js/app.js"></script>
+  </head>
+    <body ng-app="starter" ng-controller="actionsheetCtl" >
+
+        <ion-header-bar class="bar-positive">
+              <h1 class="title">Checkboxes</h1>
+            </ion-header-bar>
+                     
+            <ion-content>
+              
+              <div class="list">
+                
+                <ion-checkbox ng-repeat="item in devList"
+                              ng-model="item.checked" 
+                              ng-checked="item.checked">
+                  {{ item.text }}
+                </ion-checkbox>
+                
+                <div class="item">
+                  <pre ng-bind="devList | json"></pre> 
+                </div>
+                
+                <div class="item item-divider"> 
+                  Notifications
+                </div>
+                
+                <ion-checkbox ng-model="pushNotification.checked"
+                              ng-change="pushNotificationChange()">
+                  Push Notifications
+                </ion-checkbox>
+                
+                <div class="item">
+                  <pre ng-bind="pushNotification | json"></pre> 
+                </div>
+                
+                <ion-checkbox ng-model="emailNotification"
+                              ng-true-value="'Subscribed'"
+                              ng-false-value="'Unubscribed'">
+                  Newsletter
+                </ion-checkbox>
+                <div class="item">
+                  <pre ng-bind="emailNotification | json"></pre> 
+                </div>
+                
+              </div>
+              
+            </ion-content>
+            
+    </body>
+</html>
+
+```
+
+
+### ion-radio
+
+> Ionic 的 ion-radio 指令只有样式上和普通的有所区别。
+
+
+**HTML:**
+```javascript
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="js/app.js"></script>
+  </head>
+    <body ng-app="starter" ng-controller="actionsheetCtl" >
+
+       <ion-header-bar class="bar-positive">
+            <h1 class="title">Radio Buttons</h1>
+          </ion-header-bar>
+                   
+          <ion-content>
+            
+            <div class="list">
+              
+              <div class="item item-divider"> 
+                Clientside, Selected Value: {{ data.clientSide }}
+              </div>
+              
+              <ion-radio ng-repeat="item in clientSideList"
+                         ng-value="item.value"
+                         ng-model="data.clientSide">
+                {{ item.text }}
+              </ion-radio>
+              
+              <div class="item item-divider">
+                Serverside, Selected Value: {{ data.serverSide }}
+              </div>
+              
+              <ion-radio ng-repeat="item in serverSideList"
+                         ng-value="item.value"
+                         ng-model="data.serverSide"
+                         ng-change="serverSideChange(item)"
+                         name="server-side">
+                {{ item.text }}
+              </ion-radio>
+              
+            </div>
+            
+          </ion-content>
+            
+    </body>
+</html>
+
+```
+
+**JavaScript:**
+
+```javascript
+
+angular.module('starter', ['ionic'])
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+  });
+})
+
+.controller( 'actionsheetCtl',['$scope',function($scope){
+
+    $scope.clientSideList = [
+        { text: "Backbone", value: "bb" },
+        { text: "Angular", value: "ng" },
+        { text: "Ember", value: "em" },
+        { text: "Knockout", value: "ko" }
+      ];
+
+      $scope.serverSideList = [
+        { text: "Go", value: "go" },
+        { text: "Python", value: "py" },
+        { text: "Ruby", value: "rb" },
+        { text: "Java", value: "jv" }
+      ];
+      
+      $scope.data = {
+        clientSide: 'ng'
+      };
+      
+      $scope.serverSideChange = function(item) {
+        console.log("Selected Serverside, text:", item.text, "value:", item.value);
+      };
+      
+}])
+
+```
+
+
+
+### ion-toggle
+
+> Ionic 的 toggle 和 Ios 系统下的非常像，都是 switch 的动画。
+
+
+**HTML:**
+
+```javascript
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="js/app.js"></script>
+  </head>
+    <body ng-app="starter" ng-controller="actionsheetCtl" >
+
+        <ion-header-bar class="bar-positive">
+              <h1 class="title">Toggles</h1>
+            </ion-header-bar>
+                     
+            <ion-content>
+              
+              <div class="list">
+                
+                <div class="item item-divider"> 
+                  Settings
+                </div>
+                
+                <ion-toggle ng-repeat="item in settingsList"
+                            ng-model="item.checked" 
+                            ng-checked="item.checked">
+                  {{ item.text }}
+                </ion-toggle>
+                
+                <div class="item">
+                  <pre ng-bind="settingsList | json"></pre> 
+                </div>
+                
+                <div class="item item-divider"> 
+                  Notifications
+                </div>
+                
+                <ion-toggle ng-model="pushNotification.checked"
+                            ng-change="pushNotificationChange()">
+                  Push Notifications
+                </ion-toggle>
+                
+                <div class="item">
+                  <pre ng-bind="pushNotification | json"></pre> 
+                </div>
+                
+                <ion-toggle toggle-class="toggle-assertive"
+                            ng-model="emailNotification"
+                            ng-true-value="Subscribed"
+                            ng-false-value="Unubscribed">
+                  Newsletter
+                </ion-toggle>
+                
+                <div class="item">
+                  <pre ng-bind="emailNotification | json"></pre> 
+                </div>
+                
+              </div>
+              
+            </ion-content>
+    </body>
+</html>
+
+```
+
+**JavaScript:**
+
+```javascript
+
+angular.module('starter', ['ionic'])
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+  });
+})
+
+.controller( 'actionsheetCtl',['$scope',function($scope){
+
+    $scope.settingsList = [
+        { text: "Wireless", checked: true },
+        { text: "GPS", checked: false },
+        { text: "Bluetooth", checked: false }
+      ];
+
+      $scope.pushNotificationChange = function() {
+        console.log('Push Notification Change', $scope.pushNotification.checked);
+      };
+      
+      $scope.pushNotification = { checked: true };
+      $scope.emailNotification = 'Subscribed';
+      
+}])
+
+```
+
+
+
