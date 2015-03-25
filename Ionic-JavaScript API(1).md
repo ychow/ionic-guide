@@ -1034,3 +1034,87 @@ angular.module('starter', ['ionic'])
 }])
 
 ```
+
+
+
+### on-swipe
+### on-swipe-up
+### on-swipe-down
+### on-swipe-left
+### on-swipe-right
+
+> on-swipe 是指手指滑动效果，可以是任何方向上的。而且也和 on-drag 类似，都有四个方向上单独的事件。
+
+
+**HTML:**
+
+```javascript
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="js/app.js"></script>
+  </head>
+    <body ng-app="starter" ng-controller="actionsheetCtl" >
+        <button on-swipe="onSwipe()" class="button">onSwipe</button>
+        <button on-swipe-up="onSwipeUp()" class="button">onSwipeUp</button>
+        <button onSwipeDown="onSwipeDown()" class="button">onSwipeDown</button>
+        <button onSwipeUp="onSwipeRight()" class="button">onSwipeRight</button>
+        <button onSwipeUp="onSwipeLeft()" class="button">onSwipeLeft</button>
+    </body>
+</html>
+
+```
+
+**JavaScript:**
+
+```javascript
+
+angular.module('starter', ['ionic'])
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+  });
+})
+
+.controller( 'actionsheetCtl',['$scope',function($scope){
+
+    $scope.onSwipe=function(){
+        console.log("onSwipe")
+    }
+
+    $scope.onSwipeUp=function(){
+        console.log("onSwipeUp")
+    }
+
+    $scope.onSwipeDown=function(){
+        console.log("onSwipeDown")
+    }
+
+    $scope.onSwipeLeft=function(){
+        console.log("onSwipeLeft")
+    }
+
+    $scope.onSwipeRight=function(){
+        console.log("onSwipeRight")
+    }
+      
+}])
+
+```
