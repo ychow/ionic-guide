@@ -597,3 +597,440 @@ angular.module('starter', ['ionic'])
 
 
 
+### On-hold (长按)
+
+> 长按的时间是500毫秒。
+
+**HTML:**
+
+```javascript
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="js/app.js"></script>
+  </head>
+    <body ng-app="starter" ng-controller="actionsheetCtl" >
+        <button on-hold="onHold()" class="button">长按我！</button>
+    </body>
+</html>
+
+
+```
+
+**JavaScript:**
+
+```javascript
+
+angular.module('starter', ['ionic'])
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+  });
+})
+
+.controller( 'actionsheetCtl',['$scope',function($scope){
+
+    $scope.onHold=function(){
+        alert('on-hold')
+    }
+    
+      
+}])
+
+```
+
+
+### On-tap(手点击)
+
+> 这个是手势轻击事件，如果长按时间超过250毫秒，那就不是轻击了。
+
+**HTML:**
+
+```javascript
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="js/app.js"></script>
+  </head>
+    <body ng-app="starter" ng-controller="actionsheetCtl" >
+        <button on-tap="onTap()" class="button">轻击我</button>
+    </body>
+</html>
+
+```
+
+**JavaScript：**
+
+```javascript
+
+angular.module('starter', ['ionic'])
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+  });
+})
+
+.controller( 'actionsheetCtl',['$scope',function($scope){
+
+    $scope.onTap=function(){
+        alert('on-tap')
+    }
+    
+      
+}])
+
+```
+
+
+
+### on-double-tap (手双击屏幕事件)
+
+
+**HTML:**
+
+```javascript
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="js/app.js"></script>
+  </head>
+    <body ng-app="starter" ng-controller="actionsheetCtl" >
+        <button on-double-tap="onDoubleTap()" class="button">双击</button>
+    </body>
+</html>
+
+```
+
+**JavaScript:**
+
+```javascript
+
+angular.module('starter', ['ionic'])
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+  });
+})
+
+.controller( 'actionsheetCtl',['$scope',function($scope){
+
+    $scope.onDoubleTap=function(){
+        alert("你触发了双击事件")
+    }
+    
+      
+}])
+
+```
+
+
+### on-touch
+
+> 这个和 on-tap 还是有区别的，这个是立即执行，而且是用户点击立马执行。不用等待 touchend/mouseup 。
+
+**HTML:**
+
+```javascript
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="js/app.js"></script>
+  </head>
+    <body ng-app="starter" ng-controller="actionsheetCtl" >
+        <button on-touch="onTouch()" class="button">on-touch</button>
+    </body>
+</html>
+
+```
+
+
+**JavaScript:**
+
+```javascript
+
+angular.module('starter', ['ionic'])
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+  });
+})
+
+.controller( 'actionsheetCtl',['$scope',function($scope){
+
+    $scope.onTouch=function(){
+        alert("你触发了on-touch")
+    }
+    
+      
+}])
+
+```
+
+
+
+### on-release 
+
+> 当用户结束触摸事件时触发。
+
+
+**HTML:**
+
+```javascript
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="js/app.js"></script>
+  </head>
+    <body ng-app="starter" ng-controller="actionsheetCtl" >
+        <button on-release="onRelease()" class="button">onRelease</button>
+    </body>
+</html>
+
+```
+
+
+**JavaScript**
+
+```javascript
+
+angular.module('starter', ['ionic'])
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+  });
+})
+
+.controller( 'actionsheetCtl',['$scope',function($scope){
+
+    $scope.onRelease=function(){
+        alert("你触发了onRelease")
+    }
+    
+      
+}])
+
+```
+
+
+### on-drag
+
+> 这个有点类似于PC端的拖拽。当你一直点击某个物体，并且手开始移动，都会触发 on-drag。
+
+
+**HTML:**
+
+```javascript
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="js/app.js"></script>
+  </head>
+    <body ng-app="starter" ng-controller="actionsheetCtl" >
+        <button on-drag="onDrag()" class="button">onDrag</button>
+    </body>
+</html>
+
+```
+
+
+**JavaScript:**
+
+
+```javascript
+
+angular.module('starter', ['ionic'])
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+  });
+})
+
+.controller( 'actionsheetCtl',['$scope',function($scope){
+
+    $scope.onDrag=function(){
+        console.log("onDrag")
+    }
+    
+      
+}])
+
+```
+
+
+### on-drag-up
+### on-drag-right
+### on-drag-down
+### on-drag-left
+
+> 这几个都和 on-drag 类似，只是根据手势移动的方向不同而触发各自的事件。你还可以在各自的方法里，添加当前手所点击的横纵坐标，来让方块和你的手势动起来！
+
+
+**HTML:**
+
+```javascript
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="js/app.js"></script>
+  </head>
+    <body ng-app="starter" ng-controller="actionsheetCtl" >
+        <button on-drag-up="onDragUp()" class="button">onDragUp</button>
+        <button on-drag-down="onDragDown()" class="button">onDragDown</button>
+        <button on-drag-right="onDragRight()" class="button">onDragRight</button>
+        <button on-drag-left="onDragLeft()" class="button">onDragLeft</button>
+    </body>
+</html>
+
+```
+
+**JavaScript:**
+
+```javascript
+
+angular.module('starter', ['ionic'])
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+  });
+})
+
+.controller( 'actionsheetCtl',['$scope',function($scope){
+
+    $scope.onDragUp=function(){
+        console.log("onDragUp")
+    }
+
+    $scope.onDragDown=function(){
+        console.log("onDragDown")
+    }
+
+    $scope.onDragRight=function(){
+        console.log("onDragRight")
+    }
+    
+    $scope.onDragLeft=function(){
+        console.log("onDragLeft")
+    }
+      
+}])
+
+```
