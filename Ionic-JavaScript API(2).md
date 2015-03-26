@@ -412,7 +412,7 @@ angular.module('starter', ['ionic'])
 ```
 
 
-!(ionicLoading)[http://7vijqz.com1.z0.glb.clouddn.com/ionicLoading.gif]
+![ionicLoading](http://7vijqz.com1.z0.glb.clouddn.com/ionicLoading.gif)
 
 
 
