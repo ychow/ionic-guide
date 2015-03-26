@@ -228,3 +228,42 @@ angular.module('starter', ['ionic'])
 
 ```
 
+
+
+### ion-delete-button 
+
+> 可以删除 ion-item 。
+
+**HTML:**
+```javascript
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="js/app.js"></script>
+  </head>
+    <body ng-app="starter" ng-controller="actionsheetCtl" >
+        <ion-list show-delete="shouldShowDelete">
+          <ion-item>
+            <ion-delete-button class="ion-minus-circled"></ion-delete-button>
+            Hello, list item!
+          </ion-item>
+        </ion-list>
+        <ion-toggle ng-model="shouldShowDelete">
+          Show Delete?
+        </ion-toggle>
+              
+    </body>
+</html>
+
+```
+
+![ion-delete](http://7vijqz.com1.z0.glb.clouddn.com/ion-delete.gif)
