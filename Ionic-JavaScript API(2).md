@@ -267,3 +267,153 @@ angular.module('starter', ['ionic'])
 ```
 
 ![ion-delete](http://7vijqz.com1.z0.glb.clouddn.com/ion-delete.gif)
+
+
+
+### collection-repeat
+
+> 如果列表项目有非常多，你可以使用 collection-repeat ，它的性能比 ng-repeat 好。
+
+
+**HTML:**
+
+```javascript
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="js/app.js"></script>
+  </head>
+    <body ng-app="starter" ng-controller="actionsheetCtl" >
+        <ion-header-bar class="bar-positive">
+            <h1 class="title">1000 Items</h1>
+          </ion-header-bar>
+          <ion-content>
+            <ion-list>
+              <ion-item collection-repeat="item in main.items">
+                {{item}}
+              </ion-item>
+            </ion-list>
+          </ion-content>   
+              
+    </body>
+</html>
+
+```
+
+
+**JavaScript:**
+
+```javascript
+
+angular.module('starter', ['ionic'])
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+  });
+})
+
+.controller( 'actionsheetCtl',['$scope',function($scope){
+
+    $scope.items = [];
+      for (var i = 0; i < 1000; i++){
+        $scope.items.push(i);
+      }
+}])
+
+```
+
+
+![collection-repeat](http://7vijqz.com1.z0.glb.clouddn.com/collection-repeat.png)
+
+
+
+### $ionicLoading
+
+> 这个是 Ionic 默认的一个加载交互效果。里面的内容也是可以在 template 里面修改。
+
+
+**HTML:**
+
+···javascript
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <script src="js/app.js"></script>
+  </head>
+    <body ng-app="starter" ng-controller="actionsheetCtl" >
+          <ion-content>
+            <h2 ng-click="show()">ionicLoading</h2>
+          </ion-content>   
+              
+    </body>
+</html>
+
+```
+
+**JavaScript:**
+
+```javascript
+
+angular.module('starter', ['ionic'])
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+    }
+    if(window.StatusBar) {
+      StatusBar.styleDefault();
+    }
+  });
+})
+
+.controller( 'actionsheetCtl',['$scope','$ionicLoading','$timeout',function($scope,$ionicLoading,$timeout){
+
+    $scope.show = function() {
+        $ionicLoading.show({
+          template: 'Loading...'
+        });
+      };
+
+    $timeout(function(){
+       $ionicLoading.hide();
+    },2000)
+      
+}])
+
+```
+
+
+!(ionicLoading)[http://7vijqz.com1.z0.glb.clouddn.com/ionicLoading.gif]
+
+
+
+
