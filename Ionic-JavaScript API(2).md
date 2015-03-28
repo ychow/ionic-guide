@@ -466,4 +466,4 @@ angular.module('testApp', ['ionic'])
 });
 ```
 
-
+### $ionicPopover
