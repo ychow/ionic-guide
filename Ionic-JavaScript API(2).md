@@ -415,5 +415,55 @@ angular.module('starter', ['ionic'])
 ![ionicLoading](http://7vijqz.com1.z0.glb.clouddn.com/ionicLoading.gif)
 
 
+### $ionicModal
+
+> 它是一个可以遮住用户主界面的内容框。
+
+> 你可以在你的 index 文件 或者是 其他文件内嵌入一下代码(里面的代码都可以根据你自己的业务场景相应的改变)：
+
+```javascript
+<script id="my-modal.html" type="text/ng-template">
+  <ion-modal-view>
+    <ion-header-bar>
+      <h1 class="title">My Modal title</h1>
+    </ion-header-bar>
+    <ion-content>
+      Hello!
+    </ion-content>
+  </ion-modal-view>
+</script>
+```
+
+> 然后你就可以在你的 Controller 里面的注入 $ionicModal 。然后调用你刚刚写入的模板，进行初始化操作。就像下面的代码：
+
+```javascript
+angular.module('testApp', ['ionic'])
+.controller('MyController', function($scope, $ionicModal) {
+  $ionicModal.fromTemplateUrl('my-modal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+  $scope.openModal = function() {
+    $scope.modal.show();
+  };
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+  //Cleanup the modal when we're done with it!
+  $scope.$on('$destroy', function() {
+    $scope.modal.remove();
+  });
+  // Execute action on hide modal
+  $scope.$on('modal.hidden', function() {
+    // Execute action
+  });
+  // Execute action on remove modal
+  $scope.$on('modal.removed', function() {
+    // Execute action
+  });
+});
+```
 
 
