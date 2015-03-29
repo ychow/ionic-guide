@@ -206,5 +206,24 @@ angular.module('starter', ['ionic'])
 ```
 
 
+### ion-spinner
 
+> ionSpinner 提供了许多种旋转加载的动画图标。当你的界面加载时，你就可以呈现给用户相应的加载图标。该图标采用的是SVG。用法也非常简单。
+
+```javascript
+<ion-spinner icon="spiral"></ion-spinner>    //默认用法
+```
+
+> 下面是 Ionic 提供的一些，前面是它们各自的命名，你只需要在icon 里面写上各自的命名，就Ok啦。
+
+！[spinner](http://7vijqz.com1.z0.glb.clouddn.com/spinner.png)
+
+
+> 像大部分其他的Ionic组件一样，Spinner也可以使用Ionic的标准颜色命名规则，就像下面这样：
+
+```javascript
+<ion-spinner class="spinner-energized"></ion-spinner>
+```
+
+![spiiner](http://7vijqz.com1.z0.glb.clouddn.com/spiner.gif)
 
