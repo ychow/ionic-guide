@@ -467,3 +467,72 @@ angular.module('testApp', ['ionic'])
 ```
 
 ### $ionicPopover
+
+> ionicPopover 是一个可以浮在app内容上的一个视图框。它经常被用来聚集或是展现一些信息给用户。
+
+> 你可以在 index的文件或是其他文件里写入你想展现的模板。
+
+```javascript
+<script id="my-popover.html" type="text/ng-template">
+          <ion-popover-view>
+            <ion-header-bar>
+              <h1 class="title">My Popover Title</h1>
+            </ion-header-bar>
+            <ion-content>
+              Hello!
+            </ion-content>
+          </ion-popover-view>
+        </script>  
+```
+
+> 然后在相应的Controller里面注入$ionicPopover，以及初始化。
+
+```javascript
+.controller( 'actionsheetCtl',['$scope','$ionicPopover','$timeout',function($scope,$ionicPopover,$timeout){
+
+    $scope.popover = $ionicPopover.fromTemplateUrl('my-popover.html', {
+      scope: $scope
+    });
+
+    // .fromTemplateUrl() method
+    $ionicPopover.fromTemplateUrl('my-popover.html', {
+      scope: $scope
+    }).then(function(popover) {
+      $scope.popover = popover;
+    });
+
+
+    $scope.openPopover = function($event) {
+      $scope.popover.show($event);
+    };
+    $scope.closePopover = function() {
+      $scope.popover.hide();
+    };
+    //Cleanup the popover when we're done with it!
+    $scope.$on('$destroy', function() {
+      $scope.popover.remove();
+    });
+    // Execute action on hide popover
+    $scope.$on('popover.hidden', function() {
+      // Execute action
+    });
+    // Execute action on remove popover
+    $scope.$on('popover.removed', function() {
+      // Execute action
+    });
+      
+}])
+
+```
+
+> 然后你就可以在页面上调用相应的方法，来触发它。
+
+```javascript
+ <p>
+  <button ng-click="openPopover($event)">Open Popover</button>
+</p>
+```
+
+![$ionicPopover](http://7vijqz.com1.z0.glb.clouddn.com/ionicPopover.gif)
+
+
