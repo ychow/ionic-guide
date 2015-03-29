@@ -216,7 +216,7 @@ angular.module('starter', ['ionic'])
 
 > 下面是 Ionic 提供的一些，前面是它们各自的命名，你只需要在icon 里面写上各自的命名，就Ok啦。
 
-！[spinner](http://7vijqz.com1.z0.glb.clouddn.com/spinner.png)
+![spinner](http://7vijqz.com1.z0.glb.clouddn.com/spinner.png)
 
 
 > 像大部分其他的Ionic组件一样，Spinner也可以使用Ionic的标准颜色命名规则，就像下面这样：
