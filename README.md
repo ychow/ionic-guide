@@ -24,6 +24,7 @@ Ionic的联合创始人Max Lynch介绍这款工具时提到，这款工具就是
 * 常用Js控件
   + [Ionic-JavaScript API(1)](https://github.com/ychow/ionic-guide/blob/master/Ionic-JavaScript%20API(1).md)
   + [Ionic-JavaScript API(2)](https://github.com/ychow/ionic-guide/blob/master/Ionic-JavaScript%20API(2).md)
+  + [Ionic-JavaScript API(3)](https://github.com/ychow/ionic-guide/blob/master/Ionic-JavaScript%20API(3).md)
 * 综合项目
 
 * [开发中的一些坑(持续更新。。。)](https://github.com/ychow/Blog/issues/7)
