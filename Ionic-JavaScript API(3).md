@@ -227,3 +227,28 @@ angular.module('starter', ['ionic'])
 
 ![spiiner](http://7vijqz.com1.z0.glb.clouddn.com/spiner.gif)
 
+
+
+### ion-slide-box
+
+>它是一个多页面的容器，你可以滑动或者拖拽来切换他们。我们也可以用它来做一个幻灯片(我在公司的项目里面就是用它来改的幻灯片)！最简单的用法如下：
+
+**HTML:**
+```javascript
+<ion-slide-box on-slide-changed="slideHasChanged($index)">
+  <ion-slide>
+    <div class="box blue"><h1>BLUE</h1></div>
+  </ion-slide>
+  <ion-slide>
+    <div class="box yellow"><h1>YELLOW</h1></div>
+  </ion-slide>
+  <ion-slide>
+    <div class="box pink"><h1>PINK</h1></div>
+  </ion-slide>
+</ion-slide-box>
+```
+
+![ion-slide-box](http://ionicframework.com.s3.amazonaws.com/docs/controllers/slideBox.gif)
+
+
+
