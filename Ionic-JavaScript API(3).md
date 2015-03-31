@@ -251,4 +251,34 @@ angular.module('starter', ['ionic'])
 ![ion-slide-box](http://ionicframework.com.s3.amazonaws.com/docs/controllers/slideBox.gif)
 
 
+### ion-side-menus 
 
+**HTML:**
+
+```javascript
+<ion-side-menus>
+  <!-- Center content -->
+  <ion-side-menu-content ng-controller="ContentController">
+  </ion-side-menu-content>
+
+  <!-- Left menu -->
+  <ion-side-menu side="left">
+  </ion-side-menu>
+
+  <!-- Right menu -->
+  <ion-side-menu side="right">
+  </ion-side-menu>
+</ion-side-menus>
+```
+
+**Javascript:**
+
+```javascript
+function ContentController($scope, $ionicSideMenuDelegate) {
+  $scope.toggleLeft = function() {
+    $ionicSideMenuDelegate.toggleLeft();
+  };
+}
+```
+
+![ion-side-menus](http://ionicframework.com.s3.amazonaws.com/docs/controllers/sidemenu.gif)
