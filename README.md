@@ -25,8 +25,10 @@ Ionic的联合创始人Max Lynch介绍这款工具时提到，这款工具就是
   + [Ionic-JavaScript API(1)](https://github.com/ychow/ionic-guide/blob/master/Ionic-JavaScript%20API(1).md)
   + [Ionic-JavaScript API(2)](https://github.com/ychow/ionic-guide/blob/master/Ionic-JavaScript%20API(2).md)
   + [Ionic-JavaScript API(3)](https://github.com/ychow/ionic-guide/blob/master/Ionic-JavaScript%20API(3).md)
+  + 
 * 综合项目
-
+  + [Ionic博客](https://github.com/ychow/ionic-guide/blob/master/Ionic%E5%8D%9A%E5%AE%A2.md)
+  
 * [开发中的一些坑(持续更新。。。)](https://github.com/ychow/Blog/issues/7)
 
 > 如果文中有错误，或者您在开发中遇见了什么奇怪的Bug，欢迎创建 issue 或者 pull request。
