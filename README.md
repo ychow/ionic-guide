@@ -1,5 +1,9 @@
 # Ionic 中文指南
 
+##Tips
+由于最近Ionic2出来，所以大家在使用命令下载 Ionic，最好带上你想下载的版本号。如果没有版本号，默认下载的Ionic是最新版！
+下载Ionic1.x的命令： npm install ionic@跟上你想要的版本号 -g 
+
 ## Ionic 简介
 
 ionic是一个专注于用WEB开发技术，基于HTML5创建类似于手机平台原生应用的一个开发框架。
